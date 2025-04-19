@@ -50,7 +50,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Flex-box
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
