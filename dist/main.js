@@ -1,15 +1,16 @@
 "use strict";
 // Declaring Variables
-const hamburgerMenu = document.querySelector(".hamburger-menu");
 const hamburgerImg = document.querySelector(".hamburger-img");
-hamburgerMenu.addEventListener("click", () => {
-    // Changing the hamburger icon
+const dropDownMenu = document.querySelector(".dropdown-menu");
+hamburgerImg.addEventListener("click", () => {
+    // Changing the hamburger icon & toggling active classes
     const img = hamburgerImg;
     if (img.src.includes("icon-close.svg")) {
         img.src = "images/icon-hamburger.svg";
+        dropDownMenu?.classList.add("hidden");
     }
     else {
         img.src = "images/icon-close.svg";
+        dropDownMenu?.classList.remove("hidden");
     }
-    // toggling active classes
 });
