@@ -1,16 +1,37 @@
 "use strict";
 // Declaring Variables
 const hamburgerImg = document.querySelector(".hamburger-img");
-const dropDownMenu = document.querySelector(".dropdown-menu");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const anchorLink = document.querySelectorAll(".nav-links");
+const menuLinks = document.querySelectorAll(".menu-link");
+// ---- Writing Functionality For Mobile Nav-Bar ---- //
 hamburgerImg.addEventListener("click", () => {
     // Changing the hamburger icon & toggling active classes
     const img = hamburgerImg;
     if (img.src.includes("icon-close.svg")) {
         img.src = "images/icon-hamburger.svg";
-        dropDownMenu?.classList.add("hidden");
+        hamburgerMenu?.classList.add("hidden");
     }
     else {
         img.src = "images/icon-close.svg";
-        dropDownMenu?.classList.remove("hidden");
+        hamburgerMenu?.classList.remove("hidden");
     }
+});
+// ---- Desktop Nav Active class ---- //
+menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        if (link.classList.contains("active")) {
+            link.classList.add("active");
+        }
+        else {
+            link.classList.remove("active");
+        }
+    });
+});
+// ---- Mobile Nav Active class ---- //
+anchorLink.forEach((link) => {
+    link.addEventListener("click", () => {
+        link.classList.add("active-mobile");
+    });
+    link.classList.remove("active-mobile");
 });
