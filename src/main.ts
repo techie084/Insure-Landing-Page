@@ -17,7 +17,7 @@ const menuLinks = document.querySelectorAll(
 
 // ---- Writing Functionality For Mobile Nav-Bar ---- //
 hamburgerImg.addEventListener("click", () => {
-  // Changing the hamburger icon & toggling active classes
+  // Changing the hamburger icon & toggling active classes for mobile hamburger-menu
   const img = hamburgerImg;
 
   if (img.src.includes("icon-close.svg")) {
@@ -30,15 +30,15 @@ hamburgerImg.addEventListener("click", () => {
 });
 
 // ---- Desktop Nav Active class ---- //
-menuLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (link.classList.contains("active")) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-});
+// menuLinks.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     if (link.classList.contains("active")) {
+//       link.classList.add("active");
+//     } else {
+//       link.classList.remove("active");
+//     }
+//   });
+// });
 
 // ---- Mobile Nav Active class ---- //
 anchorLink.forEach((link) => {
